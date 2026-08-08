@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Fairservice provides website development, SEO, digital marketing and dependable technology support across India." />
   <title>Fairservice | Web, SEO & Digital Growth</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18374993413"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18374993413');
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
@@ -41,6 +49,27 @@
   <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#home"><span class="brand-mark">F</span> FAIR<em>SERVICE</em></a><div>Web • SEO • Digital Growth • India</div><div>© 2026 Fairservice. All rights reserved.</div></div></footer>
   <button class="float" id="waOpen" type="button" aria-label="Open the Fairservice WhatsApp offer">WhatsApp us — 10% OFF</button>
   <div class="wa-pop" id="waPop" role="dialog" aria-modal="true" aria-labelledby="waTitle"><div class="wa-box"><button class="wa-close" id="waClose" aria-label="Close offer">×</button><div class="gift">🎁</div><span class="wa-badge">NEW CUSTOMER OFFER</span><h2 id="waTitle">Get 10% OFF your first order</h2><p>Start a WhatsApp chat now and claim your Fairservice welcome discount.</p><a class="btn" href="https://wa.link/netravati" target="_blank">● Claim offer on WhatsApp</a><div class="wa-note">Quick response • Clear guidance • Pan-India service</div></div></div>
-  <script>document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{const item=q.parentElement;document.querySelectorAll('.faq-item').forEach(x=>{if(x!==item)x.classList.remove('open')});item.classList.toggle('open')}));const pop=document.getElementById('waPop');const openPop=()=>pop.classList.add('show');const closePop=()=>pop.classList.remove('show');setTimeout(openPop,700);document.getElementById('waOpen').addEventListener('click',openPop);document.getElementById('waClose').addEventListener('click',closePop);pop.addEventListener('click',e=>{if(e.target===pop)closePop()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closePop()});</script>
+  <script>
+    document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{const item=q.parentElement;document.querySelectorAll('.faq-item').forEach(x=>{if(x!==item)x.classList.remove('open')});item.classList.toggle('open')}));
+    const pop=document.getElementById('waPop');
+    const openPop=()=>pop.classList.add('show');
+    const closePop=()=>pop.classList.remove('show');
+    setTimeout(openPop,700);
+    document.getElementById('waOpen').addEventListener('click',openPop);
+    document.getElementById('waClose').addEventListener('click',closePop);
+    pop.addEventListener('click',e=>{if(e.target===pop)closePop()});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closePop()});
+
+    function trackWhatsAppConversion() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18374993413/C21xCKLiod4cEIXM8LlE',
+        'value': 1.0,
+        'currency': 'INR'
+      });
+    }
+    document.querySelectorAll('a[href^="https://wa.link/"]').forEach(link => {
+      link.addEventListener('click', trackWhatsAppConversion);
+    });
+  </script>
 </body>
 </html>
